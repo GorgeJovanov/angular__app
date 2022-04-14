@@ -1,27 +1,83 @@
-# ExtFox
+ Razlika pomegu ES6 i ES5 ->
+ 
+ES6 e updejtirana verzija na ES5 i doaga so golemi prednosti. Vo ES6 ima nov tip na data "symbol",
+isto taka vo ES6 mozeme da definirame promenlivi so var, let i const dodeka vo ES5 se koristi samo var.
+I uste edna golema razlika vo ES6 e arrow function koja dozvoluvala kodot da bide 
+po ednostaven i razbirliv.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+==============================
 
-## Development server
+Osnovni tipovi vo JavaScript ->
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Osnovni tipovi za data vo JavaScript se 
+String
+Number
+Boolean
+Undefined
+Null
 
-## Code scaffolding
+====================
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Razlikata pomegu " == " i " === " ->
 
-## Build
+" == " e operator za sporeduvanje na dve vrednosti no pred sporeduvanjeto gi transformira 
+vrednostite vo ist tip na data i dokolku sporedime data od tip number i data od tip string so ista vrednost
+ovoj operator ke vrati true. Dodeka " === " e po strog operator 
+i bi vratil true samo dokolku dvete vrednosti se od ist tip na data.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+====================
 
-## Running unit tests
+Razlikata pomegu setTimeout() i setInterval() ->
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+So setTimeout mozeme da zakazame izvrsuvanje na nekoja funkcija po istekuvanje na odreden vremenski
+period dokolku so setInterval zakazuvame izvrsuvanje na nekoja funkcija koja ke se izvrsi i ke se 
+povtoruva na odreden vremenski period. 
+Primer bi bil kopceto add na prvata zadaca vo funkcijata 
+addMore kade se menuva visibility na kopceto na sekoi 5 sekundi, mene mi e napraveno so setTimeout
+kade po izvrsuvanje na funkcijata povtorno ja povikuvam istata, dokolku bi bilo so setInterval toa bi 
+se pravelo avtomatski bez povtorno da se povikuva.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+==============================
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Osnovni elementi za edna Angular applikacija se ->
+
+Moduli
+Komponenti
+Templejti
+Direktivi 
+Servisi
+
+=============================
+
+Pipes vo angular ->
+
+Pipes vo angular se funkcii koi primaat odredena vrednost i ja transformiraat i ja prikazuvaat vo browser vo format koi nie go odbirame 
+kako na primer da vrati odredena vrednost vo golemi bukvi, procentualno ili data.
+
+===========================
+
+Services vo angular ->
+
+Servis vo angular moze da bide funkcija, objekt ili promenliva.Ima za cel da dostavuva 
+data ili odredena funkcija vo poveke komponenti niz edna applikacija.
+
+===========================
+
+Lifecycle hooks ->
+
+Lifecycle hooks sa specialni funkcii vo angular sto se izvrsuvaat vo odreden moment od aplikacijata. Za primer onInit e event
+sto se izvrsuva pri ranuvanje na odredena komponenta. Drugi takvi eventi sa ngAfterViewInit() ngOnChanges() ngDoCheck() ngonDestry()
+
+
+============================
+ngFor ->
+
+ngFor e direktiva sto se koristi vo html file za da sa izliste odredena niza
+ 
+
+============================ 
+
+ng-container se koristi kako sekcija koja se renderira sama po sebe i obicno se koristi mesto div

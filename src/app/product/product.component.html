@@ -1,0 +1,49 @@
+
+
+<div class="header" >
+    <div><button pButton routerLink= '/main' pRipple type="button" label="Back" class="p-button-rounded p-button-warning"></button></div>
+    <div style="    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;">
+        <i style="font-size: 30px; color: blue;" class="fas fa-cart-plus"></i>
+        <div style="font-size: 15px;font-size: 20px;
+        border-radius: 15px;
+        font-weight: 700;
+        font-family: sans-serif; " class="badge bg-danger">{{productsNumber}}</div>
+    </div>
+</div>
+<br><br><br>
+<div class="content-section implementation">
+    <div class="card">
+        <div class="twoGrid">
+            <div>
+        <p-galleria [value]="images" [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '640px'}" [numVisible]="3" [(activeIndex)]="activeIndex"> 
+            <ng-template pTemplate="item" let-item>
+                <img [src]="item.previewImageSrc" style="width: 100%;" />
+            </ng-template>
+            <ng-template pTemplate="thumbnail" let-item>
+                <div class="grid grid-nogutter justify-content-center">
+                    <img [src]="item.thumbnailImageSrc" />
+                </div>
+            </ng-template>
+        </p-galleria>
+        </div>
+        <div class="secondGrid">
+            <p-card header="{{images[activeIndex].title}}" [style]="{'width': '25rem', 'margin-bottom': '2em'}">  
+                    {{images[activeIndex].alt}}
+                <ng-template pTemplate="footer">
+                    <div class="py-2">
+                        <button pButton pRipple type="button" icon="pi pi-minus" (click)="prev()" class="p-button-rounded"></button>
+                        <button pButton pRipple type="button" icon="pi pi-plus" (click)="next()" class="p-button-rounded"></button>
+                        <p-button icon="pi pi-shopping-cart" (click)="testAPI()" style="float: right;"></p-button>
+                      <!-- <button pButton pRipple type="button" label="Add to cart"(click)="addProduct()" class="p-button-rounded p-button-success" style="float: right;"></button>--> 
+                    </div>
+                </ng-template>
+            </p-card>
+            <div>
+                <p-progressSpinner *ngIf=ifSpinner></p-progressSpinner>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

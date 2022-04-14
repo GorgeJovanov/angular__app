@@ -1,0 +1,18 @@
+
+<button pButton routerLink= '/main' pRipple type="button" label="Back" class="p-button-rounded p-button-warning"></button>
+<br>
+<br><br>
+
+<div class='threeGrid'>
+<ng-template ngFor let-recept [ngForOf]="recepts">
+    <p-card header="{{recept.name}}" [style]="{'width': '25rem', 'margin-bottom': '2em'}">
+       <ng-template pTemplate="header"> {{recept.id}}
+       </ng-template>
+      <p>{{recept.description}}</p>
+    </p-card>
+</ng-template>
+</div>
+
+<button pButton type="button" label="Add" (click)=addMore() *ngIf='visibility'></button>
+<br><br>
+<button pButton type="button" label="ApiCall" (click)=apiCall()></button>
